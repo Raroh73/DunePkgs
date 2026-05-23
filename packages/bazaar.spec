@@ -1,12 +1,12 @@
 %global appid io.github.kolunmi.Bazaar
 
 Name:           bazaar
-Version:        0.8.0
+Version:        0.8.1
 Release:        1%{?dist}
 Summary:        New App Store for GNOME
 License:        GPL-3.0-only
 URL:            https://usebazaar.org/
-Source:         https://github.com/bazaar-org/bazaar/archive/v%{version}/bazaar-%{version}.tar.gz
+Source:         https://github.com/bazaar-org/bazaar/archive/refs/tags/v%{version}.tar.gz
 
 BuildRequires:  babel
 BuildRequires:  blueprint-compiler
@@ -79,5 +79,7 @@ rm -fr %{buildroot}%{_includedir}/bge/
 %{_userunitdir}/%{appid}.service
 
 %changelog
+* Sat May 23 2026 Raroh73 <me@raroh73.com>
+- Update to 0.8.1
 * Thu May 21 2026 Raroh73 <me@raroh73.com>
 - Init at 0.8.0
