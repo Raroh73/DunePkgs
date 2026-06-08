@@ -1,7 +1,7 @@
 %global appid io.github.kolunmi.Bazaar
 
 Name:           bazaar
-Version:        0.8.1
+Version:        0.8.3
 Release:        1%{?dist}
 Summary:        New App Store for GNOME
 License:        GPL-3.0-only
@@ -50,7 +50,7 @@ New App Store for GNOME with a focus on discovering and installing applications 
 %meson_install
 %find_lang %{name}
 rm %{buildroot}%{_bindir}/bge-demo
-rm %{buildroot}%{_libdir}/pkgconfig/bge-%{version}.pc
+rm %{buildroot}%{_libdir}/pkgconfig/bge.pc
 rm -fr %{buildroot}%{_includedir}/bge/
 
 %post
@@ -75,10 +75,14 @@ rm -fr %{buildroot}%{_includedir}/bge/
 %{_datadir}/icons/hicolor/scalable/apps/%{appid}.svg
 %{_datadir}/icons/hicolor/symbolic/apps/%{appid}-symbolic.svg
 %{_datadir}/metainfo/%{appid}.metainfo.xml
-%{_libdir}/libbge-%{version}.so
+%{_libdir}/libbge.so
+%{_libdir}/libbge.so.0
+%{_libdir}/libbge.so.%{version}
 %{_userunitdir}/%{appid}.service
 
 %changelog
+* Mon Jun 08 2026 Raroh73 <me@raroh73.com>
+- Update to 0.8.3
 * Sat May 23 2026 Raroh73 <me@raroh73.com>
 - Update to 0.8.1
 * Thu May 21 2026 Raroh73 <me@raroh73.com>
