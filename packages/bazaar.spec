@@ -1,7 +1,7 @@
 %global appid io.github.kolunmi.Bazaar
 
 Name:           bazaar
-Version:        0.9.2
+Version:        0.9.3
 Release:        1%{?dist}
 Summary:        New App Store for GNOME
 License:        GPL-3.0-only
@@ -81,6 +81,8 @@ rm -fr %{buildroot}%{_includedir}/bge/
 %{_userunitdir}/%{appid}.service
 
 %changelog
+* Wed Aug 12 2026 Raroh73 <me@raroh73.com>
+- Update to 0.9.3
 * Wed Aug 05 2026 Raroh73 <me@raroh73.com>
 - Update to 0.9.2
 * Thu Jul 09 2026 Raroh73 <me@raroh73.com>
